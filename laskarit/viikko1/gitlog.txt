@@ -1,0 +1,113 @@
+commit 4fe28f3c989a1716147bce8bfd5d340793b23985
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:37:08 2023 +0200
+
+    filet muutettu
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a6c19eacdf727d4918d5d076d364db2c0bdad6ec
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:31:09 2023 +0200
+
+    filet lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 2908eedd02e84d324a7a26cc517752c1256d0ce5
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:23:40 2023 +0200
+
+    muutokset ekaan ja kolmanteen
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 86492fe5fc24ebc9e05905af5f2c03307b17ef10
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:19:29 2023 +0200
+
+    nimen vaihto
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a2a2add01fea54e765092b60e895515ba358e393
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:17:09 2023 +0200
+
+    toinen pistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 4eebcf77e143d7e7a9f1582b49fd2cdfd46acf58
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:12:58 2023 +0200
+
+    muutokset isoon tekstiin
+
+ tiedosto.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit c7d93fa987bbcbbb7ab514b56834ecc1ff55c92f
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:10:46 2023 +0200
+
+    paljon tekstii
+
+ tiedosto.txt | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+commit 02b4a9ef3adf7182ded89a1e7a5704c7bc8993c1
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:05:09 2023 +0200
+
+    stuff lisätty
+
+ stuff/neljas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b3a7067dbd4cb0e782428c13fc17307c31606855
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:02:21 2023 +0200
+
+    toinen ja kolmas muutettu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 142c1f1e4a1acd34e970cf4df1efe84513131a1a
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 20:00:58 2023 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6164fa741007b8776ce793042325c66155c1481d
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 19:57:31 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit a4cd484260ca58e158105781de5034456af51466
+Author: Nuutti Kekkonen <nuutti.kekkonen@saunalahti.fi>
+Date:   Mon Mar 20 19:52:28 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
