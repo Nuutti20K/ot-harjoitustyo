@@ -8,7 +8,7 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
 
 - Aloitusvalikko, josta voi aloittaa uuden pelin tai katsoa aikaisempia ennätyksiä
 - Pelissä pelaaja voi ohjata matoa nuolinäppäimillä ylös, alas, vasemmalle ja oikealle
-    - Madon ei liikuminen ei ole rajattu ruudukkoon
+    - Madon liikuminen on rajattu ruudukkoon
 - Pelialueelle ilmestyy satunnaisesti pelletti aina kun edellinen on kerätty
 - Kun pelletin kerää, madon pituus kasvaa
 - Kun mato törmää itseensä, peli loppuu
@@ -17,10 +17,14 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
 
 ### Jatkokehitysideoita
 
+- Nopeutus painike, jota pitämällä pohjassa mato liikkuu nopeammin
+- Bonus pellettejä, joista saa enemmän pistetä, mutta ne katoavat tietyn ajan kuluttua
 - Vaikeustason valinta, joka vaikuttaa madon nopeuteen
     - Edistyvä vaikeutuminen, jossa mato nopeutuu pelin edetessä
 - Ylimääräisiä pelialueita joissa on erilaisia esteitä, kuten seiniä
-    - Kenttäeditori jossa pelaaja voi luoda omia kenttiä
     - Vaihtoehtoinen pelimuoto, jossa peli etenee kentästä toiseen
+    - Kenttäeditori jossa pelaaja voi luoda omia kenttiä
+        - Peli tallentaa pelaajan luomat kentät
 - Liikkuvia vihollisia joita pitää väistellä
-- vaihtoehtoinen pelimuoto, jossa matoa voi ohjata vapaasti eikä sen liikkeitä ole rajattu pääilmansuuntiin
+- Vaihtoehtoinen pelimuoto, jossa matoa voi ohjata vapaasti eikä sen liikkeitä ole rajattu ruudukkoon eikä pääilmansuuntiin
+- Kaksinpeli, jossa kaksi pelaajaa ohjaa omia matoja
