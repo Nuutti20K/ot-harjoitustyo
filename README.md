@@ -1,7 +1,8 @@
 # Ohjelmistotekiniikka, harjoitustyö
 ## Matopeli projekti
 
-[vaatimusmaarittely.md](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Työaikakirjanpito](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/aikakirjanpito.md)
 
 ## Tehtävät
 ### Viikko 1
