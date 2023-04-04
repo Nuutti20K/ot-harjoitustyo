@@ -9,14 +9,8 @@
 [Työaikakirjanpito](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/aikakirjanpito.md)
 
 ## Komentorivitoiminnot
-Pelin käynnistys:
+Pelin käynnistys: poetry run invoke start
 
-poetry run invoke start
+Testien tekeminen: poetry run invoke test
 
-Testien tekeminen:
-
-poetry run invoke test
-
-Kattavuusraportti:
-
-poetry run invoke coverage-report
+Kattavuusraportti: poetry run invoke coverage-report
