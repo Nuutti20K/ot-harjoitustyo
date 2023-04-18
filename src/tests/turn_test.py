@@ -1,7 +1,7 @@
 import unittest
 from level import Level
 
-map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+grid = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
        [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
        [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
        [1, 2, 2, 2, 2, 3, 0, 0, 0, 1],
@@ -15,8 +15,8 @@ map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 
 class TestLevel(unittest.TestCase):
     def setUp(self):
-        self.level1 = Level(map)
-        self.level2 = Level(map)
+        self.level1 = Level(grid)
+        self.level2 = Level(grid)
 
     def test_turn_up(self):
         head1 = self.level1.head
@@ -41,7 +41,6 @@ class TestLevel(unittest.TestCase):
         self.level1.turn_head("up")
         self.assertEqual(head.queued_heading, "down")
 
-
     def test_turn_down(self):
         head1 = self.level1.head
         head2 = self.level2.head
@@ -64,7 +63,6 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(head.queued_heading, "up")
         self.level1.turn_head("down")
         self.assertEqual(head.queued_heading, "up")
-
 
     def test_turn_right(self):
         head1 = self.level1.head

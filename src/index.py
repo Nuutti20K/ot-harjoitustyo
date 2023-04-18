@@ -3,7 +3,7 @@ from level import Level
 from renderer import Renderer
 from game_loop import GameLoop
 
-map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+grid = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
        [1, 0, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -21,8 +21,8 @@ map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 
 
 def main():
-    level = Level(map)
-    display = pygame.display.set_mode((len(map[0])*50, len(map)*50))
+    level = Level(grid)
+    display = pygame.display.set_mode((len(grid[0])*50, len(grid)*50))
     pygame.display.set_caption("Snake")
 
     renderer = Renderer(display, level)

@@ -8,43 +8,39 @@ from sprites.floor import Floor
 
 
 class Level:
-    def __init__(self, map):
+    def __init__(self, grid):
         self.head = None
         self.bodies = pygame.sprite.Group()
         self.walls = pygame.sprite.Group()
         self.pellet = None
-        self.pellets = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
         self.obstacles = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
-        self.map = map
+        self.grid = grid
+        self.initialize_sprites(grid)
 
-        self.initialize_sprites(map)
+    def initialize_sprites(self, grid):
+        height = len(grid)
+        width = len(grid[0])
 
-    def initialize_sprites(self, map):
-        height = len(map)
-        width = len(map[0])
+        for y_coordinate in range(height):
+            for x_coordinate in range(width):
 
-        for y in range(height): # pylint: disable=invalid-name
-            for x in range(width): # pylint: disable=invalid-name
-
-                cell = map[y][x]
+                cell = grid[y_coordinate][x_coordinate]
 
                 if cell == 0:
-                    self.floors.add(Floor(x*50, y*50))
+                    self.floors.add(Floor(x_coordinate*50, y_coordinate*50))
                 if cell == 1:
-                    self.walls.add(Wall(x*50, y*50))
+                    self.walls.add(Wall(x_coordinate*50, y_coordinate*50))
                 if cell == 2:
-                    self.bodies.add(Body(x*50, y*50))
-                    self.floors.add(Floor(x*50, y*50))
+                    self.bodies.add(Body(x_coordinate*50, y_coordinate*50))
+                    self.floors.add(Floor(x_coordinate*50, y_coordinate*50))
                 if cell == 3:
-                    self.head = Head(x*50, y*50)
-                    self.floors.add(Floor(x*50, y*50))
+                    self.head = Head(x_coordinate*50, y_coordinate*50)
+                    self.floors.add(Floor(x_coordinate*50, y_coordinate*50))
                 if cell == 4:
-                    self.pellet = Pellet(x*50, y*50)
-                    self.floors.add(Floor(x*50, y*50))
-
-        self.pellets.add(self.pellet)
+                    self.pellet = Pellet(x_coordinate*50, y_coordinate*50)
+                    self.floors.add(Floor(x_coordinate*50, y_coordinate*50))
 
         self.obstacles.add(
             self.walls,
@@ -68,24 +64,31 @@ class Level:
                 self.head.growth = False
             else:
                 self.body_movement()
-            self.part_movement(self.head)
+            self.head_movement()
         else:
             self.head.next_move -= 1
 
-    def part_movement(self, part):
-        if part.heading == "right":
-            part.rect.move_ip(50, 0)
-        if part.heading == "down":
-            part.rect.move_ip(0, 50)
-        if part.heading == "left":
-            part.rect.move_ip(-50, 0)
-        if part.heading == "up":
-            part.rect.move_ip(0, -50)
-    
+    def head_movement(self):
+        if self.head.heading == "right":
+            self.head.rect.move_ip(50, 0)
+        if self.head.heading == "down":
+            self.head.rect.move_ip(0, 50)
+        if self.head.heading == "left":
+            self.head.rect.move_ip(-50, 0)
+        if self.head.heading == "up":
+            self.head.rect.move_ip(0, -50)
+
     def body_movement(self):
         headings = []
         for part in iter(self.bodies.sprites()):
-            self.part_movement(part)
+            if part.heading == "right":
+                part.rect.move_ip(50, 0)
+            if part.heading == "down":
+                part.rect.move_ip(0, 50)
+            if part.heading == "left":
+                part.rect.move_ip(-50, 0)
+            if part.heading == "up":
+                part.rect.move_ip(0, -50)
             headings.append(part.heading)
         for i in range(len(headings)-1):
             headings[i] = headings[i+1]
@@ -96,10 +99,10 @@ class Level:
             i += 1
 
     def add_body(self):
-        x = self.head.rect.x
-        y = self.head.rect.y
+        x_coordinate = self.head.rect.x
+        y_coordinate = self.head.rect.y
         heading = self.head.heading
-        self.bodies.add(Body(x, y, heading))
+        self.bodies.add(Body(x_coordinate, y_coordinate, heading))
         self.all_sprites.add(self.bodies)
         self.obstacles.add(self.bodies)
 
@@ -124,18 +127,18 @@ class Level:
         collisions = pygame.sprite.spritecollide(
             sprite, self.obstacles, False)
         return bool(collisions)
-    
+
     def pellet_check(self):
+        pellet = pygame.sprite.Group(self.pellet)
         collisions = pygame.sprite.spritecollide(
-            self.head, self.pellets, False)
+            self.head, pellet, False)
         return bool(collisions)
 
     def move_pellet(self):
-        height = len(self.map)-1
-        width = len(self.map[0])-1
+        height = len(self.grid)-1
+        width = len(self.grid[0])-1
         while self.collision_check(self.pellet) or self.pellet_check():
-            x = randint(0, width)
-            y = randint(0, height)
-            self.pellet.rect.x = x*50
-            self.pellet.rect.y = y*50
-        
+            x_coordinate = randint(0, width)
+            y_coordinate = randint(0, height)
+            self.pellet.rect.x = x_coordinate*50
+            self.pellet.rect.y = y_coordinate*50
