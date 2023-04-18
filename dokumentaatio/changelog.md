@@ -6,3 +6,13 @@
 - Lisätty madolle funktiot, joilla mato liikkuu suoraan, mutta ei vielä käänny
 - Lisätty funktio joka tarkistaa madon törmäämisen seinään ja lopettaa pelin
 - Testattu liikkumisfunktion toiminnallisuus
+
+## Viikko 4
+
+- Lisätty funktio jolla matoa voi kääntää
+- Törmääminen ei enää sulje peliä
+- Lisätty funktio, jonka avulla madon ruumis seuraa madon päätä
+- Lisätty funktiot jotka siirtävät pellettiä kun mato osuu siihen
+- Lisää testejä kääntymiselle ja liikkumiselle
+- Lisätty GameLoop-luokka, joka tarikstaa tapahtumat
+- Lisätty Renderer-luokka, joka on vastuussa ruudun päivittämisestä
