@@ -1,1 +1,2 @@
 
+![image](./kuvat/arkkitehtuuri.png)
