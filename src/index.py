@@ -1,6 +1,7 @@
 import pygame
 from level import Level
-from sprites.body import Body
+from renderer import Renderer
+from game_loop import GameLoop
 
 map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -19,36 +20,18 @@ map = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 
 
-
-
 def main():
-    pygame.init()
-    clock = pygame.time.Clock()
-    display = pygame.display.set_mode((len(map[0])*50, len(map)*50))
-
     level = Level(map)
+    display = pygame.display.set_mode((len(map[0])*50, len(map)*50))
+    pygame.display.set_caption("Snake")
 
-    level.all_sprites.draw(display)
+    renderer = Renderer(display, level)
+    clock = pygame.time.Clock()
+    game_loop = GameLoop(level, clock, renderer)
+    pygame.init()
 
-    running = True
+    game_loop.start()
 
-    while running:
-        for tapahtuma in pygame.event.get():
-            if tapahtuma.type == pygame.QUIT:
-                running = False
-
-        level.body_movement()
-        level.head_movement()
-        if level.collision_check():
-            running = False
-        
-
-        level.all_sprites.draw(display)
-        level.bodies.draw(display)
-
-        pygame.display.update()
-        clock.tick(1)
-    pygame.quit()
 
 if __name__ == "__main__":
     main()

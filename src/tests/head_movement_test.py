@@ -30,4 +30,3 @@ class TestLevel(unittest.TestCase):
         self.level.head_movement()
         self.assertEqual(head.rect.x, 7*50)
         self.assertEqual(head.rect.y, 3*50)
-    
