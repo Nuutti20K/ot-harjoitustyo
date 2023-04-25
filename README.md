@@ -4,20 +4,24 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
 
 ## Dokumentaatio
 
--[Vaatimusmäärittely](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Vaatimusmäärittely](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
--[Arkkitehtuurikuvaus](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+- [Arkkitehtuurikuvaus](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
--[Changelog](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+- [Changelog](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
--[Työaikakirjanpito](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/aikakirjanpito.md)
+- [Työaikakirjanpito](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/aikakirjanpito.md)
 
 ## Komentorivitoiminnot
 Peli käynnistetään toiminnolla:
 ```bash
 poetry run invoke start
 ```
-
-Testien tekeminen: poetry run invoke test
-
-Kattavuusraportti: poetry run invoke coverage-report
+Testien tekeminen: 
+```bash
+poetry run invoke test
+```
+Kattavuusraportti: 
+```bash
+poetry run invoke coverage-report
+```
