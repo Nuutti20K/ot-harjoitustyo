@@ -7,14 +7,17 @@ class GameLoop:
         self.clock = clock
         self.renderer = renderer
 
-    def start(self):
+    def start_game(self):
         while True:
             if self.handle_events() is False:
-                break
+                return True
             self.level.movement_coordinator()
-            self.level.collision_check(self.level.head)
+            if self.level.collision_check(self.level.head):
+                self.level.game_over()
+                return False
             if self.level.pellet_check():
                 self.level.move_pellet()
+                self.level.pellet.score_up()
                 self.level.head.growth = True
             self.render()
             self.clock.tick(60)
@@ -35,4 +38,4 @@ class GameLoop:
         return None
 
     def render(self):
-        self.renderer.render()
+        self.renderer.render(self.level.pellet.get_score())

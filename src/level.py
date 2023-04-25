@@ -128,6 +128,9 @@ class Level:
             sprite, self.obstacles, False)
         return bool(collisions)
 
+    def game_over(self):
+        pass
+
     def pellet_check(self):
         pellet = pygame.sprite.Group(self.pellet)
         collisions = pygame.sprite.spritecollide(
