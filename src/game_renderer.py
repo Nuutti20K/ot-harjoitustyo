@@ -12,7 +12,3 @@ class GameRenderer:
         text = self.font.render(f"Score: {score}", True, (255, 0, 0))
         self.display.blit(text, (50, 2))
         pygame.display.update()
-
-    def wipe_screen(self):
-        self.display.fill((0, 0, 0))
-        pygame.display.update()

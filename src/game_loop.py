@@ -10,15 +10,15 @@ class GameLoop:
     def start_game(self):
         while True:
             if self.handle_events() is False:
-                return True
+                return True # return True if game is ended with QUIT event
             self.level.movement_coordinator()
             if self.level.collision_check(self.level.head):
                 self.level.game_over()
-                return False
+                return False # return False if game is ended with game over
             if self.level.pellet_check():
                 self.level.move_pellet()
                 self.level.pellet.score_up()
-                self.level.head.growth = True
+                self.level.snake_growth()
             self.render()
             self.clock.tick(60)
 

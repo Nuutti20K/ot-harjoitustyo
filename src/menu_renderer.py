@@ -11,7 +11,3 @@ class MenuRenderer:
         self.display.fill((0, 0, 0))
         self.menu.all_buttons.draw(self.display)
         pygame.display.update()
-
-    def wipe_screen(self):
-        self.display.fill((0, 0, 0))
-        pygame.display.update()
