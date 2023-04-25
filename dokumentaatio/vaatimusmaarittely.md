@@ -8,7 +8,7 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
 
 - Aloitusvalikko, josta voi aloittaa uuden pelin tai katsoa aikaisempia ennätyksiä
 - Pelissä pelaaja voi ohjata matoa nuolinäppäimillä ylös, alas, vasemmalle ja oikealle **TEHTY**
-    - Madon liikuminen on rajattu ruudukkoon
+    - Madon liikuminen on rajattu ruudukkoon **TEHTY**
 - Pelialueelle ilmestyy satunnaisesti pelletti aina kun edellinen on kerätty **TEHTY**
 - Kun pelletin kerää, madon pituus kasvaa **TEHTY**
 - Kun mato törmää itseensä tai seinään, peli loppuu **TEHTY**
