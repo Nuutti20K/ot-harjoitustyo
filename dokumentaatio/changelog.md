@@ -16,3 +16,12 @@
 - Lisää testejä kääntymiselle ja liikkumiselle
 - Lisätty GameLoop-luokka, joka tarikstaa tapahtumat
 - Lisätty Renderer-luokka, joka on vastuussa ruudun päivittämisestä
+
+## Viikko 5
+
+- Lisätty MainMenu-luokka, joka on vastuussa päävalikon toiminnoista
+- Päävalikosta voi aloittaa pelin
+- MenuLoop-luokka on vastuussa tapahtumista valikossa ollessa
+- MenuRenderer-luokka on vastuussa ruudun päivityksestä valikossa
+- Peli laskee pelaajan pisteitä, mutta ei tallenna niitä
+- Madon törmääminen palauttaa pelin päävalikkoon, josta voi aloittaa pelin uudestaan
