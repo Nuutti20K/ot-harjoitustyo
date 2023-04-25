@@ -9,6 +9,11 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
 - [Changelog](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 - [Työaikakirjanpito](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/aikakirjanpito.md)
 
+## Asennus
+Tarvittavat riippuvuudet asennetaan komennolla:
+```bash
+poetry install
+```
 ## Komentorivitoiminnot
 Peli käynnistetään komennolla:
 ```bash
