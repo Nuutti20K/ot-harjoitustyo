@@ -1,3 +1,6 @@
+# Arkkitehtuurikuvaus
+## Sovellusslogiikka
+
 ```mermaid
 classDiagram
     class Head
@@ -28,7 +31,10 @@ classDiagram
     Level "1" -- "1" Pellet
     Level "1" -- "*" Wall
 ```
+## Päätoiminnallisuudet
+Kuvataan päätoiminnallisuuksia sekvenssi kaavioilla.
 
+### Kääntyminen
 ```mermaid
 sequenceDiagram
     actor Player
@@ -37,5 +43,8 @@ sequenceDiagram
     participant Head
     Player->>GameLoop: press "down" key
     GameLoop->>Level: turn_head("down")
-    Level->>Head: queued_heading="down"
+    Level-->>Head: queued_heading="down"
+    GameLoop->>Level: movement_coordinator()
+    Head-->>Level: queued_heading
+    Level-->>Head: heading="down"
 ```
