@@ -14,6 +14,10 @@ Tarvittavat riippuvuudet asennetaan komennolla:
 ```bash
 poetry install
 ```
+Tarvittavat alustukset tehdään komennolla:
+```bash
+poetry run invoke build
+```
 ## Komentorivitoiminnot
 Peli käynnistetään komennolla:
 ```bash
