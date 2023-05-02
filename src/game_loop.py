@@ -4,7 +4,23 @@ from repositories.score_repository import score_repository
 
 
 class GameLoop:
+    """Luokka, joka vastaa pelin tapahtumista.
+
+    Attributes
+        level: Kenttä, jossa spritet liikkuvat.
+        clock: Kello, jolla määritetään tarkastusten tahti.
+        rendrer: Luokka, joka vastaa pelin renderoinnista.
+        text_handler: Luokka, joka käsittelee tekstin kirjoittamisesta.
+        score_repository: Luokka, joka vastaa ennätysten tallentamisesta.
+    """
     def __init__(self, level, clock, renderer):
+        """Luokan konstruktori, joka luo uuden pelin.
+
+        Args:
+            level: Kenttä, jossa spritet liikkuvat.
+            clock: Kello, joka määrittää tarkastusten tahdin.
+            renderer: Luokka, joka vastaa pelin renderoinnista
+        """
         self.level = level
         self.clock = clock
         self.renderer = renderer
@@ -12,16 +28,25 @@ class GameLoop:
         self.score_repository = score_repository
 
     def start_game(self):
+        """Pelin käynnistys, jossa tarkastuksia toistetaan kunnes peli on loppunut.
+
+        Jos pää törmää esteeseen, peli loppuu ja pelaajalta kysytään nimeä pisteiden tallennukseen.
+
+        Jos pelletti kerätään, sitä siirretään, pisteet kasvaa ja käärme kasvaa.
+
+        Returns:
+            True, jos peli lopetetaan QUIT tapahtumalla, muuten pelin loppuessa False.
+        """
         while True:
             if self.handle_events() is False:
-                return True  # return True if game is ended with QUIT event
+                return True
             self.level.movement_coordinator()
             if self.level.collision_check(self.level.head):
                 name = self.text_handler.input_text()
                 score = self.level.pellet.get_score()
                 self.score_repository.add_score(name, score)
                 self.score_repository.get_scores()
-                return False  # return False if game is ended with game over
+                return False
             if self.level.pellet_check():
                 self.level.move_pellet()
                 self.level.pellet.score_up()
@@ -30,6 +55,12 @@ class GameLoop:
             self.clock.tick(60)
 
     def handle_events(self):
+        """Tarkistaa nuolinäppäimien painalluksia ja pelin sulkemista.
+
+        Jos nuolinäppäintä painaa, käärmettä pyritään kääntämään siihen suuntaan, jos se on sallittua.
+        Returns:
+            False, jos peli suljetaan, muuten ei mitään.
+        """
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
@@ -45,4 +76,6 @@ class GameLoop:
         return None
 
     def render(self):
+        """Renderöi levelin ja näyttää pisteet
+        """
         self.renderer.render(self.level.pellet.get_score())
