@@ -45,7 +45,6 @@ class GameLoop:
                 name = self.text_handler.input_text()
                 score = self.level.pellet.get_score()
                 self.score_repository.add_score(name, score)
-                self.score_repository.get_scores()
                 return False
             if self.level.pellet_check():
                 self.level.move_pellet()
