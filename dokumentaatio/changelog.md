@@ -25,3 +25,10 @@
 - MenuRenderer-luokka on vastuussa ruudun päivityksestä valikossa
 - Peli laskee pelaajan pisteitä, mutta ei tallenna niitä
 - Madon törmääminen palauttaa pelin päävalikkoon, josta voi aloittaa pelin uudestaan
+
+## Viikko 6
+
+- Lisätty funktioita, joilla SQLite-tietokanta alustetaan ja yhdistetään
+- Lisätty ScoreRepository-luokka, joka on vastuussa pisteiden lisäämisestä SQLite-tietokantaan
+- Päävalikossa näkyy viisi parasta ennätystä
+- TextHandler-luokka, joka on vastuussa pelaajan nimen kirjaamisesta
