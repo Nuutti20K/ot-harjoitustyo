@@ -1,6 +1,4 @@
 import pygame
-from ui.text_handler import TextHandler
-from repositories.score_repository import score_repository
 
 
 class GameLoop:
@@ -8,8 +6,6 @@ class GameLoop:
         self.level = level
         self.clock = clock
         self.renderer = renderer
-        self.text_handler = TextHandler(renderer, clock)
-        self.score_repository = score_repository
 
     def start_game(self):
         while True:
@@ -17,10 +13,7 @@ class GameLoop:
                 return True  # return True if game is ended with QUIT event
             self.level.movement_coordinator()
             if self.level.collision_check(self.level.head):
-                name = self.text_handler.input_text()
-                score = self.level.pellet.get_score()
-                self.score_repository.add_score(name, score)
-                self.score_repository.get_scores()
+                self.level.game_over()
                 return False  # return False if game is ended with game over
             if self.level.pellet_check():
                 self.level.move_pellet()

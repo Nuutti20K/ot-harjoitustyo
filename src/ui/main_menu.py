@@ -2,7 +2,7 @@ import pygame
 from sprites.start_button import StartButton
 from game_loop import GameLoop
 from level import Level
-from game_renderer import GameRenderer
+from renderers.game_renderer import GameRenderer
 
 
 class MainMenu:
@@ -15,7 +15,7 @@ class MainMenu:
         self.initialize_buttons()
 
     def initialize_buttons(self):
-        self.start = StartButton(350, 275)
+        self.start = StartButton(350, 450)
         self.all_buttons.add(self.start)
 
     def new_game(self):
@@ -23,6 +23,9 @@ class MainMenu:
         game_renderer = GameRenderer(self.display, level)
         game_loop = GameLoop(level, self.clock, game_renderer)
         return game_loop.start_game()
+
+    def high_scores(self):
+        pass
 
     def check_start_button(self):
         mouse_pos = pygame.mouse.get_pos()

@@ -1,11 +1,13 @@
 import pygame
-
+from repositories.score_repository import score_repository
 
 class MenuLoop:
     def __init__(self, menu, clock, renderer):
         self.menu = menu
         self.clock = clock
         self.renderer = renderer
+        self.score_repository = score_repository
+
 
     def start_menu(self):
         while True:
@@ -17,6 +19,9 @@ class MenuLoop:
     def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                scores = self.score_repository.get_top_five()
+                for score in scores:
+                    print(score)
                 if self.menu.check_start_button() and self.menu.new_game():
                     return False
             if event.type == pygame.QUIT:
@@ -24,4 +29,5 @@ class MenuLoop:
         return None
 
     def render(self):
-        self.renderer.render()
+        scores = self.score_repository.get_top_five()
+        self.renderer.render(scores)

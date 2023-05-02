@@ -1,7 +1,7 @@
 import pygame
-from main_menu import MainMenu
-from menu_renderer import MenuRenderer
-from menu_loop import MenuLoop
+from ui.main_menu import MainMenu
+from renderers.menu_renderer import MenuRenderer
+from ui.menu_loop import MenuLoop
 
 
 # grid size has to be 20*15

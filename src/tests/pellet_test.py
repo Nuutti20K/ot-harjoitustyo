@@ -1,6 +1,7 @@
 import unittest
 from sprites.pellet import Pellet
 
+
 class TestLevel(unittest.TestCase):
     def setUp(self):
         self.pellet1 = Pellet(0, 0, 0)

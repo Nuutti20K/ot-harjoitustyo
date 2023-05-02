@@ -3,8 +3,9 @@ source = src
 omit = (
     src/**/__init__.py,
     src/tests/**,
+    src/ui/**,
+    src/renderers/**,
     src/sprites/start_button.py,
-    src/menu_loop.py,
-    src/main_menu.py,
-    src/menu_renderer.py,
-    src/game_renderer.py)
+    src/sprites/scores_button.py,
+    src/index.py
+    )

@@ -18,18 +18,18 @@ class TestLevel(unittest.TestCase):
         self.level = Level(grid)
 
     def test_next_move(self):
-            head = self.level.head
-            head.next_move = 3
+        head = self.level.head
+        head.next_move = 3
 
-            self.assertEqual(head.next_move, 3)
-            self.level.movement_coordinator()
-            self.assertEqual(head.next_move, 2)
-            self.level.movement_coordinator()
-            self.assertEqual(head.next_move, 1)
-            self.level.movement_coordinator()
-            self.assertEqual(head.next_move, 0)
-            self.level.movement_coordinator()
-            self.assertEqual(head.next_move, 10)
+        self.assertEqual(head.next_move, 3)
+        self.level.movement_coordinator()
+        self.assertEqual(head.next_move, 2)
+        self.level.movement_coordinator()
+        self.assertEqual(head.next_move, 1)
+        self.level.movement_coordinator()
+        self.assertEqual(head.next_move, 0)
+        self.level.movement_coordinator()
+        self.assertEqual(head.next_move, 10)
 
     def test_heading_changes(self):
         head = self.level.head
@@ -45,9 +45,9 @@ class TestLevel(unittest.TestCase):
         self.level.movement_coordinator()
         self.assertEqual(head.heading, "right")
         self.assertEqual(head.queued_heading, "right")
-    
 
-#def movement_coordinator(self):
+
+# def movement_coordinator(self):
 #        if self.head.next_move <= 0:
 #            self.head.next_move = self.head.speed
 #            self.head.heading = self.head.queued_heading
