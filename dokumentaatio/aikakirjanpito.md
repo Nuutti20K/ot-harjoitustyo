@@ -13,8 +13,14 @@
 
 ## 25.4
 - 5 tuntia toiminnallisuuden lisäämiseen
-- 1 tuntia testien tekemiseen
+- 1 tunti testien tekemiseen
 - 1 tunti hienosäätelyyn ja dokumentaatioon
 
+
+## 2.5
+- 6 tuntia toiminnallisuuden lisäämiseen
+- 1 tuntia testien tekemiseen
+- 2 tunti hienosäätelyyn ja dokumentaatioon
+
 ## Yhteensä
-23 tuntia
+32 tuntia
