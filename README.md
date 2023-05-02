@@ -8,6 +8,7 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
 - [Arkkitehtuurikuvaus](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 - [Changelog](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 - [Työaikakirjanpito](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/aikakirjanpito.md)
+- [Käyttöohje](https://github.com/Nuutti20K/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ## Asennus
 Tarvittavat riippuvuudet asennetaan komennolla:
