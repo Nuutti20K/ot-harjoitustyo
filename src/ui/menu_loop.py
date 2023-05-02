@@ -1,13 +1,13 @@
 import pygame
 from repositories.score_repository import score_repository
 
+
 class MenuLoop:
     def __init__(self, menu, clock, renderer):
         self.menu = menu
         self.clock = clock
         self.renderer = renderer
         self.score_repository = score_repository
-
 
     def start_menu(self):
         while True:

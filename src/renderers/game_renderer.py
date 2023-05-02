@@ -14,7 +14,7 @@ class GameRenderer:
         pygame.display.update()
 
     def render_player_input(self, player):
-        game_over = self.font.render(f"Game Over!", True, (255, 0, 0))
+        game_over = self.font.render("Game Over!", True, (255, 0, 0))
         name = self.font.render(f"Name: {player}", True, (255, 0, 0))
         pygame.draw.rect(self.display, (20, 20, 20), (200, 150, 600, 450))
         self.display.blit(name, (220, 351))
