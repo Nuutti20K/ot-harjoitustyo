@@ -18,6 +18,7 @@ class Head(pygame.sprite.Sprite):
         next_move: Jäljellä olevat framet pään seuraavaan liikkumiseen.
         growth: Muuttuja kertoo kasvaako käärme seuraavalla liikkumisella
     """
+
     def __init__(self, x_coordinate=0, y_coordinate=0, speed=10, heading="right"):
         """Luokan konstruktori, joka luo käärmeen pään.
 

@@ -20,9 +20,10 @@ class Level:
         all_sprites: Ryhmä, joka koostu levelin kaikista spriteistä
         grid: Kaksiulotteinen matriisi, joka kuvaa pelialuetta.
     """
+
     def __init__(self, grid):
         """Luokan konstruktori, joka luo ryhmät kaikille lisättäville spriteille.
-        
+
         Args:
             grid: Kaksiulotteinen matriisi, joka kuvaa pelialuetta.
         """
@@ -80,7 +81,7 @@ class Level:
     def movement_coordinator(self):
         """Koordinoi käärmeen pään ja ruumiin liikkeitä ja kasvamista.
 
-        Jos käärmeen liikkuminen tapahtuu, pään suunta lukittuu ja aika seuraavaan liikkumiseen nollaantuu.
+        Jos liikkuminen tapahtuu, pään suunta lukittuu ja aika seuraavaan liikkumiseen nollaantuu.
         Muuten aika seuraavaan liikkumiseen vähenee.
 
         Jos käärme kasvaa liikkumisella, käärmelle lisätään osa ja sen kasvutilaksi laitetaa False.
@@ -153,6 +154,7 @@ class Level:
         """Kääntää päätä haluttuun suuntaan.
 
         Estää päätä kääntymästä päinvastaiseen suuntaan.
+
         Args:
             direction: Suunta johon halutaan kääntyä.
         """

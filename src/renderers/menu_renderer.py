@@ -9,6 +9,7 @@ class MenuRenderer:
         level: Kenttä, jota halutaan renderöidä.
         font: Fontti, jota käytetään renderöinnissä.
     """
+
     def __init__(self, display, menu):
         """Luokan konstruktori.
 
@@ -24,7 +25,7 @@ class MenuRenderer:
         """Renderöi valikon painikkeet ja viisi parasta ennätystä.
 
         Args:
-            scores: viisi parasta ennätystä tupleina, jossa on ensin pelaajan nimi ja toisena pisteet.
+            scores: viisi parasta ennätystä tupleina, jossa on ensin pelaajan nimi ja pisteet.
         """
         self.display.fill((0, 0, 0))
         i = 1

@@ -9,10 +9,11 @@ class GameLoop:
     Attributes
         level: Kenttä, jossa spritet liikkuvat.
         clock: Kello, jolla määritetään tarkastusten tahti.
-        rendrer: Luokka, joka vastaa pelin renderoinnista.
-        text_handler: Luokka, joka käsittelee tekstin kirjoittamisesta.
+        renderer: Luokka, joka vastaa pelin renderoinnista.
+        text_handler: Luokka, joka käsittelee tekstin kirjoittamisen.
         score_repository: Luokka, joka vastaa ennätysten tallentamisesta.
     """
+
     def __init__(self, level, clock, renderer):
         """Luokan konstruktori, joka luo uuden pelin.
 
@@ -56,7 +57,7 @@ class GameLoop:
     def handle_events(self):
         """Tarkistaa nuolinäppäimien painalluksia ja pelin sulkemista.
 
-        Jos nuolinäppäintä painaa, käärmettä pyritään kääntämään siihen suuntaan, jos se on sallittua.
+        Jos nuolinäppäintä painaa, käärmettä pyritään kääntämään siihen suuntaan.
         Returns:
             False, jos peli suljetaan, muuten ei mitään.
         """
@@ -75,6 +76,5 @@ class GameLoop:
         return None
 
     def render(self):
-        """Renderöi levelin ja näyttää pisteet
-        """
+        """Renderöi levelin ja näyttää pisteet."""
         self.renderer.render(self.level.pellet.get_score())

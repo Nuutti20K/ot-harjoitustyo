@@ -13,6 +13,7 @@ class Wall(pygame.sprite.Sprite):
         rect.x: Suorakulmion x koordinaatti.
         rect.y: Suorakulmion y koordinaatti.
     """
+
     def __init__(self, x_coordinate=0, y_coordinate=0):
         """Luokan konstruktori, joka luo uuden ruumiinosan.
 

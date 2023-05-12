@@ -14,6 +14,7 @@ class Pellet(pygame.sprite.Sprite):
         rect.y: Suorakulmion y koordinaatti.
         score: Muuttuja laskee kuinka monta kertaa pellettiä on poimittu
     """
+
     def __init__(self, x_coordinate=0, y_coordinate=0, score=0):
         """Luokan konstruktori, joka luo uuden ruumiinosan.
 

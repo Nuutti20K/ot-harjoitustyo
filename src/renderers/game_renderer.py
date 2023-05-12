@@ -9,6 +9,7 @@ class GameRenderer:
         level: Kenttä, jota halutaan renderöidä.
         font: Fontti, jota käytetään renderöinnissä.
     """
+
     def __init__(self, display, level):
         """Luokan konstruktori.
 

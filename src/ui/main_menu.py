@@ -15,6 +15,7 @@ class MainMenu:
         start: Aloitus painike.
         all_buttons: Kaikista painikkeista muodostuva ryhmä.
     """
+
     def __init__(self, grid, display, clock):
         """Luokan konstruktori, jolla luodaan päävalikko.
 

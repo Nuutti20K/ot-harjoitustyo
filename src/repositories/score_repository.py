@@ -7,6 +7,7 @@ class ScoreRepository:
     Attributes
         connection: Sqlite yhteys-olio.
     """
+
     def __init__(self, connection):
         self.connection = connection
 

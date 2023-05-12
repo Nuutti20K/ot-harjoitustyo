@@ -35,7 +35,7 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(headings[-1], "right")
         self.assertEqual(coordinates[-1][0], 200)
         self.assertEqual(coordinates[-1][1], 150)
-        
+
         self.level.add_body()
         headings = []
         coordinates = []
