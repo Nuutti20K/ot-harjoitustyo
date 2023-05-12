@@ -4,16 +4,16 @@
 
 Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato syö pelletin sen kokonaispituus kasvaa, ja kun mato törmää itseensä, peli loppuu. Kun peli loppuu peli tallentaa ennätyksen. Tavoitteena on jatkaa peliä mahdollisimman pitkään ja saavuttaa mahdollisimman hyvä piste-ennätys.
 
-### Perusversion toiminnallisuus
+### Pelin toiminnallisuudet
 
-- Aloitusvalikko, josta voi aloittaa uuden pelin tai katsoa aikaisempia ennätyksiä **TEHTY**
-- Pelissä pelaaja voi ohjata matoa nuolinäppäimillä ylös, alas, vasemmalle ja oikealle **TEHTY**
-    - Madon liikuminen on rajattu ruudukkoon **TEHTY**
-- Pelialueelle ilmestyy satunnaisesti pelletti aina kun edellinen on kerätty **TEHTY**
-- Kun pelletin kerää, madon pituus kasvaa **TEHTY**
-- Kun mato törmää itseensä tai seinään, peli loppuu **TEHTY**
-    - Pelin loppuessa pelaajalta kysytään nimeä, jonka jälkeen hänen pisteet tallennetaan **TEHTY**
-    - Kun pisteet on tallennettu, peli palaa aloitusvalikkoon **TEHTY**
+- Aloitusvalikko, josta voi aloittaa uuden pelin tai katsoa aikaisempia ennätyksiä
+- Pelissä pelaaja voi ohjata matoa nuolinäppäimillä ylös, alas, vasemmalle ja oikealle
+    - Madon liikuminen on rajattu ruudukkoon
+- Pelialueelle ilmestyy satunnaisesti pelletti aina kun edellinen on kerätty
+- Kun pelletin kerää, madon pituus kasvaa
+- Kun mato törmää itseensä tai seinään, peli loppuu
+    - Pelin loppuessa pelaajalta kysytään nimeä, jonka jälkeen hänen pisteet tallennetaan
+    - Kun pisteet on tallennettu, peli palaa aloitusvalikkoon
 
 ### Jatkokehitysideoita
 
@@ -26,5 +26,3 @@ Matopelissä on tarkoitus ohjata matoa ja kerätä pellettejä. Aina kun mato sy
     - Kenttäeditori jossa pelaaja voi luoda omia kenttiä
         - Peli tallentaa pelaajan luomat kentät
 - Liikkuvia vihollisia joita pitää väistellä
-- Vaihtoehtoinen pelimuoto, jossa matoa voi ohjata vapaasti eikä sen liikkeitä ole rajattu ruudukkoon eikä pääilmansuuntiin
-- Kaksinpeli, jossa kaksi pelaajaa ohjaa omia matoja
