@@ -1,7 +1,7 @@
 # Käyttöohje
 
 ## Konfigurointi
-Peli tallentaa piste-ennätyksiä automaattisesti tiedostoon nimeltä *database.sqlite*, jolle luodaan automaattiseti oma hakemisto *data*. Tallennettavan tiedoston nimen voi konfiguroida *.env* tiedostosta.
+Peli tallentaa piste-ennätyksiä automaattisesti tiedostoon nimeltä *database.sqlite*, joka tallennetaan hakemistoon *data*. Tallennettavan tiedoston nimen voi konfiguroida *.env* tiedostosta.
 
 ## Pelin käynnistäminen
 Tarvittavat riippuvuudet asennetaan komennolla:
