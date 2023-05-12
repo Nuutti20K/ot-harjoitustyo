@@ -46,16 +46,25 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(head.heading, "right")
         self.assertEqual(head.queued_heading, "right")
 
+    def test_growth(self):
+        head = self.level.head
+        head.next_move = 1
 
-# def movement_coordinator(self):
-#        if self.head.next_move <= 0:
-#            self.head.next_move = self.head.speed
-#            self.head.heading = self.head.queued_heading
-#            if self.head.growth:
-#                self.add_body()
-#                self.head.growth = False
-#            else:
-#                self.body_movement()
-#            self.head_movement()
-#        else:
-#            self.head.next_move -= 1
+        bodies = []
+        for body in self.level.bodies:
+            bodies.append(body)
+
+        self.level.snake_growth()
+        self.assertEqual(head.growth, True)
+        self.assertEqual(len(bodies), 4)
+        self.level.movement_coordinator()
+        self.assertEqual(head.growth, True)
+        self.assertEqual(len(bodies), 4)
+        self.level.movement_coordinator()
+
+        bodies = []
+        for body in self.level.bodies:
+            bodies.append(body)
+        self.assertEqual(head.growth, False)
+        self.assertEqual(len(bodies), 5)
+
